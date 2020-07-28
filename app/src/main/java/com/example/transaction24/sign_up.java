@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class sign_up extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextName, editTextEmail, editTextPassword, editTextPhone;
     private ProgressBar progressBar;
+    private int balance;
 
     private FirebaseAuth mAuth;
 
@@ -32,6 +33,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         editTextPhone = findViewById(R.id.edit_text_phone);
         progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.GONE);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -52,7 +54,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         final String email = editTextEmail.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
         final String phone = editTextPhone.getText().toString().trim();
-
+        final int balance = 100;
         if (name.isEmpty()) {
             editTextName.setError(getString(R.string.input_error_name));
             editTextName.requestFocus();
@@ -104,7 +106,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
                         if (task.isSuccessful()) {
 
-                            User user = new User(name, email, phone,password);
+                            User user = new User(name, email, phone,password,balance);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
