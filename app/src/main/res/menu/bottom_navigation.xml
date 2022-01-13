@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home"/>
+        android:icon="@drawable/ic_groupadd"
+        android:title="Home" />
     <item
         android:id="@+id/nav_history"
-        android:icon="@drawable/ic_history_black_24dp"
-        android:title="History"/>
+        android:icon="@drawable/ic_complain"
+        android:title="E-Complain" />
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_sentiment_satisfied_black_24dp"
-        android:title="Profile"/>
+        android:icon="@drawable/ic_sendnotification"
+        android:title="Emergency Notification" />
 
 
 

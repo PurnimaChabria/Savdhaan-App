@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PuMa App</string>
+    <string name="app_name">Saavdhaan City App</string>
     <string name="full_name">full name</string>
     <string name="email">email</string>
     <string name="password">password</string>
@@ -12,6 +12,16 @@
     <string name="input_error_phone">phone required</string>
     <string name="input_error_password_length">password should be atleast 6 characters long</string>
     <string name="input_error_phone_invalid">enter a valid phone number</string>
-    <string name="registration_success">Registered Successfully</string>
+    <string name="registration_success">Registered Successfully,please login to continue</string>
     <string name="input_error_email_invalid">enter a valid email</string>
+    <string name="complain_registered">Complain Registered</string>
+    <string name="complain_error">Complain Registration failed</string>
+    <string name="Saavdhaan" />
+    <string name="complain_notreg">Complain not registered</string>
+    <string name="Complain_reg">Complain Registered</string>
+    <string-array name="location">
+        <item>Mumbai</item>
+        <item>Nashik</item>
+        <item>Aurangabad</item>
+    </string-array>
 </resources>

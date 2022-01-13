@@ -1,5 +1,6 @@
 package com.example.transaction24;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -106,7 +107,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
                         if (task.isSuccessful()) {
 
-                            User user = new User(name, email, phone,password,balance);
+                            User user = new User(name, email, phone,password);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -116,6 +117,8 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
                                         Toast.makeText(sign_up.this, getString(R.string.registration_success), Toast.LENGTH_LONG).show();
+                                        Intent intent=new Intent(sign_up.this,MainActivity.class);
+                                        startActivity(intent);
                                     } else {
                                         //display a failure message
                                     }

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     EditText editTextEmail;
     EditText editTextPassword;
     ProgressBar progressBar;
+    static String Userid;
 
 
     @Override
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.edit_text_email);
         editTextPassword = findViewById(R.id.edit_text_password);
-        progressBar=(ProgressBar)findViewById(R.id.progressbar);
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         findViewById(R.id.button_register).setOnClickListener(this);
 
@@ -67,7 +68,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    //String userid=mAuth.getUid();
+
                     Intent intent = new Intent(MainActivity.this,MainPage.class);
+                    //intent.putExtra(Userid,userid);
                     startActivity(intent);
 
 
